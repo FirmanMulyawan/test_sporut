@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:notification_center/notification_center.dart';
 import 'package:sqflite/sqflite.dart';
 
-import '../../../../component/config/app_route.dart';
+// import '../../../../component/config/app_route.dart';
 import '../../../../component/database/database.dart';
 
 class HomeController extends GetxController {
@@ -31,7 +31,7 @@ class HomeController extends GetxController {
   }
 
   void toAddExpense() {
-    Get.toNamed(AppRoute.addExpense);
+    // Get.toNamed(AppRoute.addExpense);
     // final data = await Get.toNamed(AppRoute.addExpense);
     // if (data == true) {
     //   getExpenseDaily();

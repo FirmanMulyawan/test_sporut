@@ -1,38 +1,29 @@
-// import 'dart:convert';
+import '../../../component/base/base_repository.dart';
+import '../model/pokemon_detail_response.dart';
+import '../model/pokemon_list_request.dart';
+import '../model/pokemon_list_response.dart';
+import 'home_datasource.dart';
 
-// import 'package:dio/dio.dart';
+class HomeRepository extends BaseRepository {
+  final HomeDatasource _dataSource;
 
-// import '../../../component/base/base_repository.dart';
-// import '../../../component/util/state.dart';
-// import '../model/list_surah_response.dart';
-// import 'home_datasource.dart';
+  HomeRepository(this._dataSource);
 
-// class HomeRepository extends BaseRepository {
-//   final HomeDatasource _dataSource;
+  Future<List<ListsPokemon>> getListPokemon(
+      {required PokemonListRequest request}) async {
+    final data =
+        _dataSource.getListPokemon(request).then(mapToData).then((value) {
+      final response = PokemonListResponse.fromJson(value);
+      List<ListsPokemon> list = [];
+      response.results?.forEach((e) => list.add(e));
+      return list;
+    });
 
-//   HomeRepository(this._dataSource);
+    return data;
+  }
 
-//   Future<void> getListSurah(
-//       {required ResponseHandler<List<ListSurahResponse>> response}) async {
-//     try {
-//       final rawJson = await _dataSource.getListSurah();
-//       final decoded = jsonDecode(rawJson);
-
-//       if (decoded is List) {
-//         final list = decoded
-//             .map((e) => ListSurahResponse.fromJson(e as Map<String, dynamic>))
-//             .toList();
-
-//         response.onSuccess.call(list);
-//       } else {
-//         response.onFailed.call(Exception("Invalid format"), "Unexpected data");
-//       }
-//       response.onDone.call();
-//     } on DioException catch (e) {
-//       handleDioException(e, response);
-//     } catch (e) {
-//       response.onFailed(e, e.toString());
-//       response.onDone.call();
-//     }
-//   }
-// }
+  Future<PokemonDetailResponse> getPokemonDetail(String url) async {
+    final data = await _dataSource.getPokemonDetail(url).then(mapToData);
+    return PokemonDetailResponse.fromJson(data);
+  }
+}

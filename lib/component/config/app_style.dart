@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
 
 class AppStyle {
+  // color pokemon
+  static Color normal = const Color(0xFFA8A77A);
+  static Color fire = Color(0xFFEE8130);
+  static Color water = Color(0xFF6390F0);
+  static Color electric = Color(0xFFF7D02C);
+  static Color grass = Color(0xFF7AC74C);
+  static Color ice = Color(0xFF96D9D6);
+  static Color fighting = Color(0xFFC22E28);
+  static Color poison = Color(0xFFA33EA1);
+  static Color ground = Color(0xFFE2BF65);
+  static Color flying = Color(0xFFA98FF3);
+  static Color psychic = Color(0xFFF95587);
+  static Color bug = Color(0xFFA6B91A);
+  static Color rock = Color(0xFFB6A136);
+  static Color ghost = Color(0xFF735797);
+  static Color dragon = Color(0xFF6F35FC);
+  static Color dark = Color(0xFF705746);
+  static Color steel = Color(0xFFB7B7CE);
+  static Color fairy = Color(0xFFD685AD);
+
   static Color textColor = const Color(0xff333333);
   static Color grey1 = const Color(0xff4F4F4F);
   static Color grey3 = const Color(0xff828282);

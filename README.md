@@ -1,4 +1,4 @@
-# Money Expense App
+# Pokemon App App
 
 Aplikasi mobile untuk mencatat, mengelola, dan memantau pengeluaran harian dengan Flutter.
 

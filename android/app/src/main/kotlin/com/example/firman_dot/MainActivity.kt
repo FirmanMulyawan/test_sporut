@@ -1,4 +1,4 @@
-package com.example.firman_dot
+package com.example.firman_sprout
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,4 +1,4 @@
-name: firman_dot
+name: firman_sprout
 description: "A new Flutter project."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -16,7 +16,10 @@ dependencies:
   logger: ^2.5.0
   flutter_svg: ^2.0.17
   get: ^4.7.2
+  mobx: ^2.4.0
+  flutter_mobx: ^2.2.1+1
   flutter_dotenv: ^5.2.1
+  rxdart: ^0.28.0
   skeletonizer: ^1.4.3
   image_picker: ^1.1.2
   sqflite: ^2.3.3+1
