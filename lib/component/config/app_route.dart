@@ -1,5 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import '../../features/detail/binding/detail_binding.dart';
+import '../../features/detail/presentation/detail_screen.dart';
 import '../../features/home/binding/home_binding.dart';
 import '../../features/home/presentation/home_screen.dart';
 
@@ -11,6 +13,8 @@ import '../../features/home/presentation/home_screen.dart';
 class AppRoute {
   static const String defaultRoute = '/';
   static const String notFound = '/notFound';
+  static const String detail = '/detail';
+
   // static const String home = '/home';
   // static const String addExpense = '/add-expense';
 
@@ -28,6 +32,10 @@ class AppRoute {
     GetPage(
         name: defaultRoute,
         page: () => const HomeScreen(),
-        binding: HomeBinding())
+        binding: HomeBinding()),
+    GetPage(
+        name: detail,
+        page: () => const DetailScreen(),
+        binding: DetailBinding()),
   ];
 }

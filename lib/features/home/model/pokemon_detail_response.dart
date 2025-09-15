@@ -3,6 +3,7 @@ class PokemonDetailResponse {
   int? id;
   String? name;
   int? order;
+  int? height;
   Sprites? sprites;
   List<Types>? types;
   int? weight;
@@ -12,6 +13,7 @@ class PokemonDetailResponse {
       this.id,
       this.name,
       this.order,
+      this.height,
       this.sprites,
       this.types,
       this.weight});
@@ -26,6 +28,7 @@ class PokemonDetailResponse {
     id = json['id'];
     name = json['name'];
     order = json['order'];
+    height = json['height'];
     sprites =
         json['sprites'] != null ? Sprites.fromJson(json['sprites']) : null;
     if (json['types'] != null) {
@@ -45,6 +48,7 @@ class PokemonDetailResponse {
     data['id'] = id;
     data['name'] = name;
     data['order'] = order;
+    data['height'] = height;
     if (sprites != null) {
       data['sprites'] = sprites!.toJson();
     }
